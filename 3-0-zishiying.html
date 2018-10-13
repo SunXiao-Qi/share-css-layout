@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .list{
+      background: blue;
+      list-style: none;
+      padding: 0;
+      font-size: 0;
+      width: 1400px;
+      margin: 0 auto;
+    }
+    .list>li{
+      width: 222px;
+      display: inline-block;
+      margin: 10px 0 10px 10px;
+    }
+    .list>li>img{
+      width: 100%;
+      vertical-align: middle;
+    }
+    @media screen and (max-width: 1200px) {
+      .list{
+        width: 1200px;
+        background: cadetblue;
+      }
+      .list>li{
+        width: 188px;
+      }
+    }
+    @media screen and (max-width: 1080px) {
+      .list{
+        width: 1080px;
+        background: cornflowerblue;
+      }
+      .list>li{
+        width: 204px;
+      }
+    }
+    @media screen and (max-width: 960px) {
+      .list{
+        width: 960px;
+        background: peachpuff;
+      }
+      .list>li{
+        width: 228px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wapper">
+    <ul class="list">
+      <li><img src="./img/banner.png" alt="" srcset=""></li>
+      <li><img src="./img/banner.png" alt="" srcset=""></li>
+      <li><img src="./img/banner.png" alt="" srcset=""></li>
+      <li><img src="./img/banner.png" alt="" srcset=""></li>
+      <li><img src="./img/banner.png" alt="" srcset=""></li>
+      <li><img src="./img/banner.png" alt="" srcset=""></li>
+      <li><img src="./img/banner.png" alt="" srcset=""></li>
+    </ul>
+  </div>
+
+  <!-- 
+  自适应布局：为不同的屏幕分辨率定义不同的布局，使用不同的样式，页面元素的位置发生改变，但是元素的大小不会随着窗口的大小而变化。
+            相当于多个静态布局页面，在不同的分辨率下面显示不同的静态布局；
+
+  特点：
+    1、使用不同的样式控制不同的布局，太过于麻烦，代码过多；
+
+   -->
+</body>
+</html>

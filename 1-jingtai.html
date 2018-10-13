@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .wapper{
+      width: 100%;
+      min-width: 1100px;
+    }
+    .desic{
+      width: 300px;
+      display: inline-block;
+    }
+    .desic p{
+      text-indent: 32px;
+    }
+    .main-wapper{
+      display: inline-block;
+      vertical-align: top;
+      background: #ccc;
+    }
+    .main{
+      width: 750px;
+      margin: 0 auto;
+      background: #fff;
+    }
+    .banner{
+      height: 565px;
+      background: url('./img/banner.png') no-repeat;
+      background-size: 100%;
+    }
+    .content{
+      padding: 35px 60px 65px;
+    }
+    .txt{
+      width: 630px;
+      height: 280px;
+      background: url('./img/txt-pic.png') no-repeat;
+      background-size: 100%;
+      font-size: 25px;
+      line-height: 36px;
+      padding: 34px;
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div class="wapper">
+    <div class="desic">
+      <h2>静态布局：</h2>
+      <p>传统的web设计，网页上所有元素的尺寸都是用px布局，不管分辨率多少，页面始终会按照最初代码的样子来显示；
+      当分辨率有变化的时候，通过滚动条来查看页面的内容；</p>
+
+      特点：
+        1、编写简单，一般没有兼容性问题，但是电脑端如果屏幕大小变化时，就会出现滚动条或者空白的地方太大，不是很美观；
+        2、如果设置了<meta name="viewport" content="width=device-width, initial-scale=1.0">，手机模式下浏览器会将页面1:1缩放到正常尺寸；
+          这样缩放在每个屏幕都保证一样的页面。但是不知道是不是所有浏览器都有这个功能；
+
+      问题：
+        如果只是移动端页面的话，这种缩放比例的方式写页面是不是挺好的？
+    </div>
+    <div class="main-wapper">
+      <div class="main">
+        <div class="banner"></div>
+        <div class="content">
+          <div class="txt">
+            VIPKid is monitoring Hurricane Florence and is aware of the severity of the situation. Teacher safety is our top priority. We will work closely with all teachers who are impacted by the hurricane and will ensure that there is no penalty for impacted classes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var metaDom = document.getElementsByTagName('meta')[1];
+    console.log(metaDom.content);
+    console.log(window.devicePixelRatio);
+  </script>
+
+  <!-- 
+  静态布局：传统的web设计，网页上所有元素的尺寸都是用px布局，不管分辨率多少，页面始终会按照最初代码的样子来显示；
+          当分辨率有变化的时候，通过滚动条来查看页面的内容；
+
+  特点：
+    1、编写简单，一般没有兼容性问题，但是电脑端如果屏幕大小变化时，就会出现滚动条或者空白的地方太大，不是很美观；
+    2、如果设置了<meta name="viewport" content="width=device-width, initial-scale=1.0">，手机模式下浏览器会将页面1:1缩放到正常尺寸；
+      这样缩放在每个屏幕都保证一样的页面。但是不知道是不是所有浏览器都有这个功能；
+
+  问题：
+    如果只是移动端页面的话，这种缩放比例的方式写页面是不是挺好的？
+   -->
+</body>
+</html>

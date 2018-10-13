@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html{
+      font-size: 100px;
+    }
+    body{
+      font-size: 16px;
+    }
+    /* rem布局 */
+    /* .wapper{
+      width: 10rem;
+      margin: 0 auto;
+      background: cadetblue;
+    }
+    .wapper div{
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background: gray;
+      text-align: center;
+      color: #fff;
+      font-size: .3rem;
+      margin: .1rem 0 .1rem .1rem;
+    } */
+    @media screen and (max-width: 1000px) {
+      html{
+        font-size: 80px;
+      }
+    }
+    @media screen and (max-width: 750px) {
+      html{
+        font-size: 60px;
+      }
+    }
+
+
+    /* flex布局 */
+    .wapper{
+      display: flex;
+      background: cadetblue;
+    }
+    .wapper div{
+      flex: 1;
+      background: blue;
+      margin: .1rem 0 .1rem .1rem;
+      color: #fff;
+      font-size: .3rem;
+    }
+    .wapper .item1{
+      flex: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="wapper">
+    <div class="item1">第一个盒子</div>
+    <div class="item2">第二个盒子</div>
+    <div class="item3">第三个盒子</div>
+    <div class="item4">第四个盒子</div>
+  </div>
+
+  <!-- 
+    弹性布局：随着分辨率的大小，页面也会随着变化，但是整体布局不改变；
+    1、rem/em布局。
+      rem始终是相对于页面根元素的大小计算的；
+      em是相对于父元素的大小计算的，所以带来了很多不便，一般很少使用em；
+
+      rem:
+        一般会把html的字体设置为62.5%，因为10/15=62.5，10px方便计算，但是很多浏览器最最小字体是12px，这样的话就计算不准确了，
+        所以经常按照设计好的尺寸，把html设置为100px,body设置为正常的16px，这样计算也比较方便；
+
+        搭配媒体查询@media，不同的分辨率下设置html的大小不同，这样就会适配不同的屏幕了；
+
+      缺点：对间距要求比较高的，当分辨率比较小的时候，间距几乎就没有了；
+    2、flex布局
+      字体大小也得使用rem变化；
+      高度的话也得使用rem或者自动撑开；
+
+    结论：
+      1.如果只做pc端，那么静态布局（定宽度）是最好的选择；
+      2.如果做移动端，且设计对高度和元素间距要求不高，那么弹性布局（rem+js）是最好的选择，一份css+一份js调节font-size搞定；
+      3.如果pc，移动要兼容，而且要求很高那么响应式布局还是最好的选择，前提是设计根据不同的高宽做不同的设计，响应式根据媒体查询做不同的布局。
+   -->
+</body>
+</html>

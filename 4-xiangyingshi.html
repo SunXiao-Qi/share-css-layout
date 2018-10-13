@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body{
+      font-size: 100px;
+      font-family:Calibri-Bold;
+    }
+    div{
+      box-sizing: border-box;
+    }
+    .wapper{
+      display: inline-block;
+      width: 100%;
+      background: #cccccc;
+      margin: 0 auto;
+    }
+    .main{
+      margin: 0 auto;
+      max-width: 750px;
+      background: #fff;
+    }
+    .banner{
+      width: 100%;
+      margin-top: 2.67%;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+    .bottom{
+      width: 100%;
+      padding: 4.7% 8% 9%;
+    }
+    .conten{
+      position: relative;
+      padding: 5.3%;
+    }
+    .txt-pic{
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 0;
+    }
+    .txt{
+      position: relative;
+      font-size: .25rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="wapper">
+    <div class="main">
+      <div class="top">
+        <div class="banner">
+          <img src="./img/banner.png" alt="" srcset="">
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="conten">
+          <div class="txt-pic"><img src="./img/txt-pic.png" alt="" srcset=""></div>
+          <div class="txt">
+              VIPKid is monitoring Hurricane Florence and is aware of the severity of the situation. Teacher safety is our top priority. We will work closely with all teachers who are impacted by the hurricane and will ensure that there is no penalty for impacted classes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    function setFontSize() {
+      var mainWidth = document.getElementsByClassName('main')[0].offsetWidth;
+      var bili = 25 / 750;
+      document.getElementsByClassName('txt')[0].style.fontSize = mainWidth * bili + 'px';
+    }
+    setFontSize();
+
+    window.onresize = function() {
+      setFontSize();
+    }
+  </script>
+  <!-- 
+    响应式布局：页面元素的宽度按照屏幕的分辨率进行适配，元素大小以及布局都可能会改变，结合媒体查询+流式布局；
+    
+    1、字体自适应，使用@media查询，但是也无法突出流式特点；
+       或者使用js计算比例再设置给元素应该更精确些，高度也可以使用这种办法，但是如果字号多的话笔记麻烦；
+    2、响应式布局也是H5笔记常用的布局；
+
+
+    特点：
+      屏幕分辨率变化时，页面元素的大小位置也会跟着变化
+      媒体查询是有限的，只能适应主流的宽高，如果需要适配的屏幕足够多，可能还需要设计不同的版本；
+
+    问题：
+      如果屏幕小于等于320px的话，文字会益出，因为文字最小字体是12px？；
+   -->
+</body>
+</html>

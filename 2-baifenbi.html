@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    html,body{
+      /* font-size: 100px; */
+      font-family:Calibri-Bold;
+    }
+    div{
+      box-sizing: border-box;
+    }
+    .wapper{
+      display: inline-block;
+      width: 100%;
+      background: #cccccc;
+      margin: 0 auto;
+    }
+    .main{
+      margin: 0 auto;
+      max-width: 750px;
+      background: #fff;
+    }
+    .banner{
+      width: 100%;
+      margin-top: 2.67%;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      vertical-align: middle;
+    }
+    .bottom{
+      width: 100%;
+      padding: 4.7% 8% 9%;
+    }
+    .conten{
+      position: relative;
+      padding: 5.3%;
+    }
+    .txt-pic{
+      position: absolute;
+      top: 0;
+      left: 0;
+      line-height: 0;
+    }
+    .txt{
+      position: relative;
+      font-size: 25px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wapper">
+    <div class="main">
+      <div class="top">
+        <div class="banner">
+          <img src="./img/banner.png" alt="" srcset="">
+        </div>
+      </div>
+      <div class="bottom">
+        <div class="conten">
+          <div class="txt-pic"><img src="./img/txt-pic.png" alt="" srcset=""></div>
+          <div class="txt">
+              VIPKid is monitoring Hurricane Florence and is aware of the severity of the situation. Teacher safety is our top priority. We will work closely with all teachers who are impacted by the hurricane and will ensure that there is no penalty for impacted classes.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- 
+    流式布局：页面元素的宽度按照屏幕的分辨率进行适配，但是整体布局不变，主要采用百分比来布局，所以也就是百分比布局；
+            例如：栅格系统
+    1、百分比布局，width用%设置，高度一般不设置用内容撑开，或者使用px固定高度（但是页面大小变化时不美观。一般不用）；
+       但是如果页面过大或者过小的话，不美观，所以一般实用化max-width/min-width控制一下；
+    2、如果想设置元素的height为100%；必须同时设置html、body根元素的height为100%；
+    3、如果想让图片自适应，一般都用img引入，width设置100%，height自适应就可以了；
+    4、包裹img的div会高于img，设置vertical-align属性。对齐；
+       元素会继承line-height属性，所以给div设置line-height: 0。就好了；
+    5、如果这块区域是需要背景图片和内容的，给img绝对定位，然后给内容相对定位，就可以了；
+    6、百分比布局也是H5笔记常用的布局；
+
+    百分比布局的基准：
+      基于父元素的width：
+        width
+        margin(top、right、bottom、left)
+        padding(top、right、bottom、left)
+        left、right
+      基于父元素的height：
+        height
+        top、bottom
+      基于继承得到的：
+        font-size(我的理解其实也是基于父元素的)
+      基于当前字体：
+        line-height
+
+    特点：
+      屏幕分辨率变化时，页面元素的大小也会跟着变化，但是布局不会变
+      字体或者高度是px设置的，没有流式的特点，而且屏幕过大或者过小的时候，页面不好看；
+
+    问题：
+      如果屏幕小于等于320px的话，文字会益出，因为文字最小字体是12px？；
+   -->
+</body>
+</html>
