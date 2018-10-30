@@ -8,16 +8,23 @@
   <style>
     html,body{
       /* font-size: 100px; */
+      height: 100%;
+      margin: 0;
       font-family:Calibri-Bold;
     }
     div{
       box-sizing: border-box;
     }
     .wapper{
-      display: inline-block;
       width: 100%;
-      background: #cccccc;
+      height: 100%;
       margin: 0 auto;
+    }
+    .main-wapper{
+      display: inline-block;
+      background: #cccccc;
+      width: 100%;
+      vertical-align: top;
     }
     .main{
       margin: 0 auto;
@@ -27,6 +34,8 @@
     .banner{
       width: 100%;
       margin-top: 2.67%;
+      background: blue;
+      line-height: 0;
     }
     img{
       width: 100%;
@@ -50,22 +59,32 @@
     .txt{
       position: relative;
       font-size: 25px;
+      /* 背景图片处理 */
+      /* width: 100%;
+      padding: 20%;
+      background: url('./img/txt-pic.png') no-repeat;
+      background-size: 100%; */
     }
   </style>
 </head>
 <body>
   <div class="wapper">
-    <div class="main">
-      <div class="top">
-        <div class="banner">
-          <img src="./img/banner.png" alt="" srcset="">
+    <div class="main-wapper">
+      <div class="main">
+        <div class="top">
+          <div class="banner">
+            <img src="./img/banner.png" alt="" srcset="">
+          </div>
         </div>
-      </div>
-      <div class="bottom">
-        <div class="conten">
-          <div class="txt-pic"><img src="./img/txt-pic.png" alt="" srcset=""></div>
-          <div class="txt">
-              VIPKid is monitoring Hurricane Florence and is aware of the severity of the situation. Teacher safety is our top priority. We will work closely with all teachers who are impacted by the hurricane and will ensure that there is no penalty for impacted classes.
+        <div class="bottom">
+          <div class="conten">
+            <div class="txt-pic"><img src="./img/txt-pic.png" alt="" srcset=""></div>
+            <div class="txt">
+                VIPKid is monitoring Hurricane Florence and is aware of
+                the severity of the situation. Teacher safety is our top priority.
+                We will work closely with all teachers who are impacted by the hurricane
+                and will ensure that there is no penalty for impacted classes.
+            </div>
           </div>
         </div>
       </div>

@@ -17,10 +17,6 @@
     ul li:nth-child(8n+6) {background-color:#f3b613}   
     ul li:nth-child(8n+7) {background-color:#ff8a4a}   
     ul li:nth-child(8n+8) {background-color:#fc5366}
-    /* 浮动+百分比 */
-    /* body ul:after { clear: both; content: " "; display: block; }   
-    ul li{ float:left;   width: 30%;  height:30%; margin-top: 2.5%;  margin-left: 2.5%;    }  */
-
     /* flex+百分比 */
     ul{
       display: flex;
@@ -31,6 +27,21 @@
       width: 30%;
       margin: 2.5% 0 0 2.5%;
     }
+
+    /* 浮动+百分比 */
+    body ul:after { 
+      clear: both;
+      content: " ";
+      display: block;
+    }   
+    ul li{
+      float:left;
+      width: 30%;
+      height:30%;
+      margin-top: 2.5%;
+      margin-left: 2.5%;
+    } 
+
   </style>
 </head>
 <body>

@@ -49,7 +49,7 @@
     }
     .txt{
       position: relative;
-      font-size: .25rem;
+      /* font-size: .25rem; */
     }
   </style>
 </head>
@@ -77,6 +77,8 @@
       var mainWidth = document.getElementsByClassName('main')[0].offsetWidth;
       var bili = 25 / 750;
       document.getElementsByClassName('txt')[0].style.fontSize = mainWidth * bili + 'px';
+      var linebili = 36 / 750;
+      document.getElementsByClassName('txt')[0].style.lineHeight = mainWidth * linebili + 'px';      
     }
     setFontSize();
 
@@ -88,7 +90,8 @@
     响应式布局：页面元素的宽度按照屏幕的分辨率进行适配，元素大小以及布局都可能会改变，结合媒体查询+流式布局；
     
     1、字体自适应，使用@media查询，但是也无法突出流式特点；
-       或者使用js计算比例再设置给元素应该更精确些，高度也可以使用这种办法，但是如果字号多的话笔记麻烦；
+       或者使用js计算比例再设置给元素应该更精确些，高度也可以使用这种办法，但是如果字号多的话比较麻烦；
+       而且浏览器支持的最小字体是12px,屏幕过小的时候就无法缩放了。
     2、响应式布局也是H5笔记常用的布局；
 
 
